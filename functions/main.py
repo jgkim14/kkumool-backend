@@ -1,13 +1,35 @@
-# Welcome to Cloud Functions for Firebase for Python!
-# To get started, simply uncomment the below code or create your own.
-# Deploy with `firebase deploy`
+from fastapi import FastAPI
+import uvicorn
+import firebase_admin
+from firebase_admin import credentials, firestore
 
-from firebase_functions import https_fn
-from firebase_admin import initialize_app
+cred = credentials.Certificate("functions/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
 
-# initialize_app()
-#
-#
-# @https_fn.on_request()
-# def on_request_example(req: https_fn.Request) -> https_fn.Response:
-#     return https_fn.Response("Hello world!")
+db = firestore.client()
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.post("/add-user")
+def add_user(user_id: str, name: str):
+    doc_ref = db.collection('users').document(user_id)
+    doc_ref.set({
+        'name': name
+    })
+    return {"message": "User added successfully"}
+
+@app.get("/get-user/{user_id}")
+def get_user(user_id: str):
+    doc_ref = db.collection('users').document(user_id)
+    doc = doc_ref.get()
+    if doc.exists:
+        return doc.to_dict()
+    else:
+        return {"message": "User not found"}
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
