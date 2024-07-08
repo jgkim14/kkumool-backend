@@ -1,8 +1,4 @@
-09:53:43.011 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-09:53:43.115 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-09:53:45.489 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - kkumool-backend-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 75ms, init: 0ms
-09:53:45.522 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace kkumool-backend-default-rtdb status Active to Active
-10:12:29.289 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-10:12:29.300 [NamespaceSystem-akka.actor.default-dispatcher-10] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: kkumool-backend-default-rtdb
-10:12:29.305 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for kkumool-backend-default-rtdb
-10:12:29.309 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+10:32:58.426 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+10:32:58.542 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+10:33:06.189 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+10:33:06.193 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

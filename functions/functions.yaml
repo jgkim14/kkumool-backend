@@ -1,9 +1,0 @@
-# functions.yaml
-runtimes:
-  - name: python
-    version: '3.9'
-    entryPoint: app.main
-    availableMemoryMb: 256
-    timeout: 60s
-    environmentVariables:
-      FOO: bar
