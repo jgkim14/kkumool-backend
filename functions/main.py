@@ -1,9 +1,9 @@
-from fastapi import FastAPI
-import uvicorn
 import firebase_admin
+import uvicorn
+from fastapi import FastAPI
 from firebase_admin import credentials, firestore
 
-cred = credentials.Certificate("functions/serviceAccountKey.json")
+cred = credentials.Certificate("D:/Git_Hub/kkumool-backend/functions/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()

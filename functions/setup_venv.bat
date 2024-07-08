@@ -6,7 +6,7 @@ SETLOCAL
 SET PYTHON_PATH=C:\Users\%USERNAME%\AppData\Local\Programs\Python\Python312\python.exe
 
 :: 가상 환경 디렉토리 이름 설정
-SET ENV_DIR=.venv
+SET ENV_DIR=.\functions\venv
 
 :: Python 3.12.1 가상 환경 생성
 "%PYTHON_PATH%" -m venv %ENV_DIR%
