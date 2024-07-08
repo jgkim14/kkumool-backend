@@ -17,7 +17,7 @@
       "port": 9000
     },
     "hosting": {
-      "port": 5000
+      "port": 5050
     },
     "pubsub": {
       "port": 8085
@@ -35,5 +35,46 @@
       "enabled": false
     },
     "singleProjectMode": true
-  }
+  },
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "kkumool-dart",
+          "configurations": {
+            "android": "1:312906007506:android:6085a5eda40d8219effe0b",
+            "ios": "1:312906007506:ios:c516e2caea332dc4effe0b",
+            "web": "1:312906007506:web:237fd44efc0bee68effe0b"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "venv",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
 }

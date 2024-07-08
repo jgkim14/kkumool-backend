@@ -123,9 +123,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/jgkim/.pub-cache/hosted/pub.dev/http-0.13.6",
+      "rootUri": "file:///Users/jgkim/.pub-cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
@@ -338,7 +338,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-07-08T01:38:36.647891Z",
+  "generated": "2024-07-08T02:21:14.777824Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.22.2/flutter",
